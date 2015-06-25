@@ -4,7 +4,7 @@ class scribe (
     $host = '0.0.0.0',
     $source = 'git://github.com/LandRegistry/charges-scribe',
     $branch_or_revision = 'master',
-    $domain = 'api.*',
+    $domain = 'scribeapi.*',
     $owner = 'vagrant',
     $group = 'vagrant'
 ) {
