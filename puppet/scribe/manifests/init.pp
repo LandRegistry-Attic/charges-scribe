@@ -1,8 +1,8 @@
-# Install and configure the Flask Api Skeleton
-class api_skeleton (
+# Install and configure the Scribe app
+class scribe (
     $port = '9010',
     $host = '0.0.0.0',
-    $source = 'git://github.com/LandRegistry/charges-api-skeleton',
+    $source = 'git://github.com/LandRegistry/charges-scribe',
     $branch_or_revision = 'master',
     $domain = 'api.*',
     $owner = 'vagrant',

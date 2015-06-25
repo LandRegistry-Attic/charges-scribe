@@ -1,0 +1,11 @@
+{
+  "name": "scribe",
+  "version": "0.0.1",
+  "author": "Land Registry Charges team",
+  "summary": "Install the Flask Api Skeleton.",
+  "license": "MIT",
+  "source": "https://github.com/LandRegistry/charges-scribe",
+  "project_page": "https://github.com/LandRegistry/charges-scribe",
+  "issues_url": "https://github.com/LandRegistry/charges-scribe",
+  "dependencies": [{"name": "puppetlabs/vcsrepo"}]
+}
