@@ -19,7 +19,7 @@ git submodule update --init
 
 rubocop=$?
 
-coverage run --source=app tests.py --xml
+DATABASE_URI='postgres:///scribe' coverage run --source=app tests.py --xml
 
 test_pass=$?
 

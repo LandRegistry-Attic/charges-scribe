@@ -1,12 +1,10 @@
-from flask import jsonify
+from app.helloworld.model import Hello
 
 
 def register_routes(blueprint):
     @blueprint.route('/helloworld', methods=['GET'])
     def get_title():
 
-        result = {
-            "Hello": "World",
-        }
+        result = Hello.get()
 
-        return jsonify(result)
+        return result.to_json()
