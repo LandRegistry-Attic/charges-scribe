@@ -1,6 +1,6 @@
 from flask import Flask
 from flask.ext.script import Manager
-from app import helloworld
+from app import helloworld, db
 
 
 def create_manager():
@@ -9,5 +9,7 @@ def create_manager():
 
     manager = Manager(app)
     app.register_blueprint(helloworld.blueprint)
+
+    db.init(app, manager)
 
     return manager

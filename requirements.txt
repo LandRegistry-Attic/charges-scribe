@@ -2,3 +2,6 @@ Flask
 Flask-Script
 flake8
 gunicorn
+Flask-SQLAlchemy
+Flask-Migrate
+psycopg2
