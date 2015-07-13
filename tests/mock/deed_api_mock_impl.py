@@ -1,6 +1,6 @@
-def get_deed_json(md_ref):
-    return {}
+from flask import jsonify
+from flask.ext.api import status
 
 
-def can_sign(deed_id, borrower_id):
-    return {}
+def sign(deed_id, borrower_id, signature):
+    return jsonify(status_code=status.HTTP_200_OK)
