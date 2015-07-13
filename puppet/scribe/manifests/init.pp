@@ -9,8 +9,6 @@ class scribe (
     $group = 'vagrant'
 ) {
   require ::standard_env
-  require ::postgresql::server
-  require ::postgresql::lib::devel
 
   vcsrepo { "/opt/${module_name}":
     ensure   => latest,
@@ -65,11 +63,6 @@ class scribe (
     owner   => $owner,
     group   => $group,
     notify  => Service['nginx'],
-  }
-
-  postgresql::server::db { 'charges':
-    user     => $owner,
-    password => postgresql_password($owner, 'dapassword'),
   }
 
 }
