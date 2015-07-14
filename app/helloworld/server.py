@@ -9,4 +9,4 @@ def register_routes(blueprint):
             "Hello": "World",
         }
 
-        return jsonify(result)
+        return result
