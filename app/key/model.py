@@ -1,6 +1,7 @@
 from app.db import db
 from app import json
 
+
 class Key(db.Model, json.Serialisable):
 
     __tablename__ = 'key'

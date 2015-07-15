@@ -1,5 +1,4 @@
 from app.key.model import Key
-from flask import request
 
 
 def register_routes(blueprint):
