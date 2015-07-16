@@ -3,6 +3,7 @@ import unittest
 from tests.helpers import setUpApp, with_context, setUpDB, tearDownDB
 from tests.key.helpers import KeyHelper
 
+
 class TestKeyModel (unittest.TestCase):
 
     def setUp(self):
