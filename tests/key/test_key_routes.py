@@ -1,4 +1,6 @@
-from tests.helpers import with_client, setUpApp, with_context, setUpDB, tearDownDB
+from tests.helpers import (
+    with_client, setUpApp, with_context, setUpDB, tearDownDB
+)
 from tests.key.helpers import KeyHelper
 import unittest
 from flask.ext.api import status
@@ -27,4 +29,3 @@ class TestKey (unittest.TestCase):
 
         self.assertEqual(len(decoded_json), 1)
         self.assertEqual(decoded_json[0], gen_key.to_json())
-
