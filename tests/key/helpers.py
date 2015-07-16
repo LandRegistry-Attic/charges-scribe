@@ -1,7 +1,7 @@
-import os
 from Crypto.PublicKey import RSA
 from random import randint
 from app.key.model import Key
+
 
 class KeyHelper:
 
