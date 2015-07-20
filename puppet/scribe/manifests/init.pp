@@ -5,7 +5,7 @@ class scribe (
     $source = 'git://github.com/LandRegistry/charges-scribe',
     $branch_or_revision = 'master',
     $subdomain = 'scribeapi',
-    $domain = "${subdomain}.*",
+    $domain = undef,
     $owner = 'vagrant',
     $group = 'vagrant'
 ) {
@@ -72,5 +72,7 @@ class scribe (
     password => $owner,
   }
 
-  standard_env::dev_host { $subdomain: }
+  if $environment == 'development' {
+    standard_env::dev_host { $subdomain: }
+  }
 }
