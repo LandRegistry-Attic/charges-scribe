@@ -5,6 +5,7 @@ class scribe (
     $source = 'git://github.com/LandRegistry/charges-scribe',
     $branch_or_revision = 'master',
     $domain = 'scribeapi.*',
+    $deed_api_address = '',
     $owner = 'vagrant',
     $group = 'vagrant'
 ) {

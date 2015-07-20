@@ -1,4 +1,5 @@
 Flask
 Flask-Script
+flake8
 gunicorn
 requests
