@@ -1,4 +1,4 @@
-from time import time
+from time import strftime
 from flask import request, jsonify, abort
 
 
@@ -9,7 +9,7 @@ def register_routes(blueprint, deed_api):
         borrower_name = request.form['borrower_name']
 
         def create_signature():
-            return borrower_name + "_" + str(time())
+            return borrower_name + "_" + strftime("%d/%m/%Y_%H:%M:%S")
 
         signature = create_signature()
         result = deed_api.sign(deed_id, borrower_id, signature)
