@@ -54,6 +54,7 @@ class scribe (
       File["/opt/${module_name}/bin/run.sh"],
       File["/etc/systemd/system/${module_name}.service"],
       File["/var/run/${module_name}"],
+      Standard_env::Db::Postgres[$module_name]
     ],
   }
 
@@ -66,4 +67,8 @@ class scribe (
     notify  => Service['nginx'],
   }
 
+  standard_env::db::postgres { $module_name:
+    user     => $owner,
+    password => $owner,
+  }
 }
