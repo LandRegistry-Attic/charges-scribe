@@ -6,6 +6,7 @@ from tests.mock import deed_api_mock_impl
 
 database_URI = 'sqlite://'
 
+
 def with_context(test):
     @wraps(test)
     def _wrapped_test(self):
