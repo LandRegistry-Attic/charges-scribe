@@ -1,5 +1,5 @@
 import os
 
 DEBUG = True
-DEED_API_BASE_HOST = os.getenv('DEED_API_ADDRESS', 'http://10.10.10.10:5000')
+DEED_API_BASE_HOST = os.getenv('DEED_API_ADDRESS', '')
 SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI', '')
