@@ -2,6 +2,7 @@ Flask
 Flask-Script
 flake8
 gunicorn
+requests
 Flask-SQLAlchemy
 Flask-Migrate
 Flask-API

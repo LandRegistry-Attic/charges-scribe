@@ -7,7 +7,8 @@ class scribe (
     $subdomain = 'scribeapi',
     $domain = undef,
     $owner = 'vagrant',
-    $group = 'vagrant'
+    $group = 'vagrant',
+    $deed_api_address = 'http://deedapi.dev.service.gov.uk',
 ) {
   require ::standard_env
 
@@ -70,9 +71,5 @@ class scribe (
   standard_env::db::postgres { $module_name:
     user     => $owner,
     password => $owner,
-  }
-
-  if $environment == 'development' {
-    standard_env::dev_host { $subdomain: }
   }
 }

@@ -1,6 +1,8 @@
 from functools import wraps
 from app import create_manager
 from app.db import db
+from app.service.deed_api import interface
+from tests.mock import deed_api_mock_impl
 
 database_URI = 'sqlite://'
 
@@ -22,12 +24,16 @@ def with_client(test):
     return _wrapped_test
 
 
-def setUpApp(self):
-    manager = create_manager()
+def make_deed_client():
+    return interface.DeedApiInterface(deed_api_mock_impl)
+
+
+def setUpApp(self, deed_api_mock_client=make_deed_client):
+    manager = create_manager(deed_api_client=deed_api_mock_client)
     self.app = manager.app
     self.app.config["SQLALCHEMY_DATABASE_URI"] = database_URI
-    self.manager = manager
     self.app.config['TESTING'] = True
+    self.manager = manager
 
 
 def setUpDB(self):
