@@ -8,7 +8,7 @@ class scribe (
     $domain = undef,
     $owner = 'vagrant',
     $group = 'vagrant',
-    $deed_api_address = '',
+    $deed_api_address = 'http://deedapi.dev.service.gov.uk',
 ) {
   require ::standard_env
 
