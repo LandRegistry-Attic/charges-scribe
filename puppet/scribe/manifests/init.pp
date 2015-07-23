@@ -72,4 +72,8 @@ class scribe (
     user     => $owner,
     password => $owner,
   }
+
+  if $environment == 'development' {
+    standard_env::dev_host { $subdomain: }
+  }
 }
