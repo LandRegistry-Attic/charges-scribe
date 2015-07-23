@@ -5,6 +5,7 @@ virtualenv ./.service_env
 source ./.service_env/bin/activate
 
 pip3 install -r requirements.txt
+echo $DEED_API_ADDRESS > tmp_log
 
 port="${<%=@module_name.upcase%>_GUNICORN_PORT:-8000}"
 host="${<%=@module_name.upcase%>_GUNICORN_HOST:-0.0.0.0}"
@@ -17,3 +18,4 @@ else
   echo "Database migration failed!!! Exiting"
   exit 1
 fi
+
