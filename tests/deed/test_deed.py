@@ -10,7 +10,7 @@ class TestDeed(unittest.TestCase):
     @with_client
     def test_sign_deed(self, client):
         borrower_name = "DS"
-        response = client.post('/deed/1/1/signature',
+        response = client.post('/deed/1/1/signature/',
                                data={"borrower_name": borrower_name})
 
         assert response.status_code == 200
