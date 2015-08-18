@@ -6,7 +6,7 @@ def register_routes(blueprint, deed_api):
     @blueprint.route('/deed/<deed_id>/<borrower_id>/signature/',
                      methods=['POST'])
     def sign_deed(deed_id, borrower_id):
-        borrower_name = request.form['borrower_name']
+        borrower_name = request.json['borrower_name']
 
         def create_signature():
             return borrower_name + "_" + strftime("%d/%m/%Y_%H:%M:%S")
