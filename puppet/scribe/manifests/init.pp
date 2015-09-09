@@ -4,11 +4,11 @@ class scribe (
     $host = '0.0.0.0',
     $source = 'git://github.com/LandRegistry/charges-scribe',
     $branch_or_revision = 'master',
-    $subdomain = 'scribeapi',
+    $subdomain = 'scribe',
     $domain = undef,
     $owner = 'vagrant',
     $group = 'vagrant',
-    $deed_api_address = 'http://deedapi.dev.service.gov.uk',
+    $deed_api_address = 'http://deed-api.dev.service.gov.uk',
 ) {
   require ::standard_env
 
