@@ -1,6 +1,7 @@
 from tests.helpers import (
     with_client, setUpApp, with_context, setUpDB, tearDownDB
 )
+from app.key import service as key_service
 from tests.key.helpers import KeyHelper
 import unittest
 from flask.ext.api import status
@@ -20,7 +21,7 @@ class TestKey (unittest.TestCase):
     @with_client
     def test_get_key_api(self, client):
         gen_key = KeyHelper._create_key()
-        gen_key.save()
+        key_service.save(gen_key)
 
         response = client.get('/key')
         self.assertEqual(response.status_code, status.HTTP_200_OK)

@@ -10,30 +10,6 @@ class Key(db.Model, json.Serialisable):
     public_key = db.Column(db.String())
     private_key = db.Column(db.String())
 
-    def save(self):
-        db.session.add(self)
-        db.session.commit()
-
-    @staticmethod
-    def all():
-        return Key.query.all()
-
-    @staticmethod
-    def get(id_):
-        return Key.query.filter_by(id=id_).first()
-
-    @staticmethod
-    def delete(id_):
-        key = Key.query.filter_by(id=id_).first()
-
-        if key is None:
-            return key
-
-        db.session.delete(key)
-        db.session.commit()
-
-        return key
-
     def json_format(self):
         jsondata = {}
 

@@ -1,5 +1,5 @@
-from app.key.model import Key
+from app.key import service as key_service
 
 
 def all_keys():
-    return Key.all()
+    return key_service.all()
