@@ -1,11 +1,12 @@
 from tests.helpers import with_client, setUpApp, with_context
+from tests.mock.deed_api import MockDeedApi
 import unittest
 import json
 
 
 class TestDeed(unittest.TestCase):
     def setUp(self):
-        setUpApp(self)
+        setUpApp(self, deed_api_client=MockDeedApi)
 
     @with_context
     @with_client
