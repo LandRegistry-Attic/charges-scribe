@@ -24,4 +24,3 @@ if test_result.wasSuccessful():
 else:
     number_failed = len(test_result.failures) + len(test_result.errors)
     sys.exit(number_failed)
-    
